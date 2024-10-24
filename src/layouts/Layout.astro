@@ -1,0 +1,218 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title, 
+  description = "Servicios profesionales de limpieza post incendio en Barcelona. Limpieza de hollín, eliminación de olores y restauración completa después de incendios. Llámenos 24/7 al 690 22 09 44."
+} = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "INCENDIX",
+  "image": "https://incendix.es/logo.png",
+  "description": description,
+  "@id": "https://incendix.es",
+  "url": "https://incendix.es",
+  "telephone": "+34690220944",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carrer de Sant Hermenegild, 16-24",
+    "addressLocality": "Barcelona",
+    "postalCode": "08006",
+    "addressRegion": "Barcelona",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.4021,
+    "longitude": 2.1413
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "sameAs": [
+    "https://www.facebook.com/incendix",
+    "https://twitter.com/incendix",
+    "https://www.instagram.com/incendix"
+  ]
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://incendix.es" />
+    <meta property="og:image" content="https://incendix.es/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://incendix.es/og-image.jpg" />
+  </head>
+  <body class="bg-gray-50">
+    <header class="bg-white shadow-sm relative">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="/" class="text-2xl font-bold text-primary z-10">
+          INCENDIX
+        </a>
+
+        <!-- Mobile menu button -->
+        <button
+          id="menuButton"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Abrir menú principal</span>
+          <svg
+            class="block h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex space-x-8">
+          <a href="/" class="text-gray-700 hover:text-primary">Inicio</a>
+          <a href="#servicios" class="text-gray-700 hover:text-primary">Servicios</a>
+          <a href="#garantias" class="text-gray-700 hover:text-primary">Garantías</a>
+          <a href="#testimonios" class="text-gray-700 hover:text-primary">Testimonios</a>
+          <a href="#contacto" class="text-gray-700 hover:text-primary">Contacto</a>
+        </div>
+
+        <a href="tel:690220944" class="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark transition-colors z-10">
+          690 22 09 44
+        </a>
+
+        <!-- Mobile menu -->
+        <div
+          id="mobileMenu"
+          class="hidden absolute top-16 left-0 w-full bg-white border-b border-gray-200 shadow-lg md:hidden"
+        >
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">
+              Inicio
+            </a>
+            <a href="#servicios" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">
+              Servicios
+            </a>
+            <a href="#garantias" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">
+              Garantías
+            </a>
+            <a href="#testimonios" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">
+              Testimonios
+            </a>
+            <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">
+              Contacto
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <slot />
+
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">INCENDIX</h3>
+            <p class="text-gray-400">
+              Servicios profesionales de limpieza y restauración después de incendios en Barcelona y alrededores.
+            </p>
+            <address class="text-gray-400 mt-4 not-italic">
+              Carrer de Sant Hermenegild, 16-24<br>
+              Sarrià-Sant Gervasi<br>
+              08006 Barcelona
+            </address>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contacto</h3>
+            <p class="text-gray-400">
+              Teléfono: <a href="tel:690220944" class="hover:text-white">690 22 09 44</a><br>
+              Email: <a href="mailto:info@incendix.es" class="hover:text-white">info@incendix.es</a><br>
+              Disponibilidad 24/7 para emergencias
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Zonas de Servicio</h3>
+            <p class="text-gray-400">
+              Barcelona ciudad y área metropolitana<br>
+              Servicio urgente en toda la provincia
+            </p>
+            <div class="mt-4">
+              <a href="https://maps.google.com/?q=Carrer+de+Sant+Hermenegild,+16-24,+Sarrià-Sant+Gervasi,+08006+Barcelona" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="text-primary-light hover:text-white transition-colors">
+                Ver en Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+          <p>&copy; {new Date().getFullYear()} INCENDIX. Todos los derechos reservados. <a href="https://www.justclean.es/condiciones-generales/" class="hover:text-white">Aviso Legal</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuButton = document.getElementById('menuButton');
+      const mobileMenu = document.getElementById('mobileMenu');
+      let isMenuOpen = false;
+
+      menuButton?.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        if (mobileMenu) {
+          mobileMenu.classList.toggle('hidden', !isMenuOpen);
+        }
+        menuButton.setAttribute('aria-expanded', isMenuOpen.toString());
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (event) => {
+        if (isMenuOpen && mobileMenu && menuButton && 
+            !mobileMenu.contains(event.target as Node) && 
+            !menuButton.contains(event.target as Node)) {
+          isMenuOpen = false;
+          mobileMenu.classList.add('hidden');
+          menuButton.setAttribute('aria-expanded', 'false');
+        }
+      });
+    </script>
+  </body>
+</html>

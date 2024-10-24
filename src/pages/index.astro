@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+---
+
+<Layout title="INCENDIX | Limpieza post incendio Barcelona">
+  <main>
+    <Hero 
+      title={`Expertos en limpieza\npost incendio en Barcelona`}
+      subtitle="Servicio profesional de limpieza y restauración después de incendios. Recupere su espacio con rapidez y eficacia."
+    />
+
+    <!-- Servicios -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          Nuestros servicios
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ServiceCard
+            title="Limpieza de hollín"
+            description="Nuestro servicio especializado de limpieza de hollín utiliza técnicas avanzadas y productos profesionales para eliminar completamente los residuos de todas las superficies afectadas. Empleamos equipos de última generación y métodos específicos según el tipo de material, garantizando una limpieza profunda y segura que restaura las superficies a su estado original."
+            image="https://images.unsplash.com/photo-1656432975530-f05d496096f7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          />
+          <ServiceCard
+            title="Eliminación de olores"
+            description="Implementamos un sistema integral de eliminación de olores que incluye tratamientos con ozono, hidroxilación térmica y otros métodos avanzados. No solo enmascaramos los olores, sino que los eliminamos a nivel molecular, garantizando un ambiente completamente libre de olores a humo y otros residuos del incendio."
+            image="https://images.unsplash.com/photo-1626195565750-1e1ee92b3dd1?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          />
+          <ServiceCard
+            title="Restauración"
+            description="Ofrecemos un servicio completo de restauración que abarca desde la limpieza profunda hasta la reconstrucción. Nuestro equipo experto evalúa los daños y desarrolla un plan personalizado de restauración, utilizando técnicas especializadas para cada tipo de superficie y material afectado."
+            image="https://plus.unsplash.com/premium_photo-1676638911628-b1c1d1038a61?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Garantías y experiencia -->
+    <section class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          Garantías y experiencia
+        </h2>
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="text-gray-700 text-lg leading-relaxed mb-8">
+            En INCENDIX, nos respaldan más de una década de experiencia especializada en la restauración y limpieza post incendio en Barcelona y su área metropolitana. Nuestro equipo está formado por profesionales certificados en restauración de daños por incendios, con formación continua en las últimas técnicas y tecnologías del sector.
+          </p>
+          <p class="text-gray-700 text-lg leading-relaxed mb-8">
+            Garantizamos resultados excepcionales en cada proyecto, respaldados por nuestro compromiso de satisfacción del cliente. Utilizamos exclusivamente productos y equipos de primera calidad, certificados y respetuosos con el medio ambiente. Todos nuestros trabajos están cubiertos por un seguro de responsabilidad civil y ofrecemos garantías por escrito en todos nuestros servicios.
+          </p>
+          <p class="text-gray-700 text-lg leading-relaxed">
+            Nuestra disponibilidad 24/7 para emergencias, junto con nuestro tiempo de respuesta inferior a 60 minutos en Barcelona ciudad, nos permite minimizar los daños secundarios y acelerar el proceso de recuperación. Trabajamos en estrecha colaboración con las principales compañías de seguros y ofrecemos asesoramiento experto en la gestión de siniestros.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">
+          Lo que dicen nuestros clientes
+        </h2>
+        <p class="text-xl text-gray-600 text-center mb-12">
+          Experiencias reales de clientes satisfechos con nuestros servicios
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <TestimonialCard
+            name="María García"
+            location="Eixample, Barcelona"
+            text="Después del incendio en mi restaurante, INCENDIX realizó un trabajo excepcional. No solo limpiaron todo el hollín, sino que también eliminaron completamente el olor a humo. Su respuesta rápida y profesionalidad fueron fundamentales para poder reabrir el negocio lo antes posible."
+            image="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200"
+            rating={5}
+          />
+          <TestimonialCard
+            name="Carlos Martínez"
+            location="Sant Gervasi, Barcelona"
+            text="Un equipo altamente profesional. Después del incendio en mi hogar, pensé que sería imposible recuperar algunos muebles de valor sentimental, pero INCENDIX logró restaurarlos perfectamente. Su atención al detalle y compromiso con el cliente son excepcionales."
+            image="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200"
+            rating={5}
+          />
+          <TestimonialCard
+            name="Ana Rodríguez"
+            location="Gràcia, Barcelona"
+            text="Servicio rápido y eficiente. Llegaron en menos de una hora después de mi llamada y comenzaron a trabajar de inmediato. El resultado fue impecable, y el trato personal fue excelente. Totalmente recomendable para cualquier emergencia por incendio."
+            image="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200"
+            rating={5}
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20 bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Contacte con Nosotros</h2>
+          <p class="text-xl text-gray-300">Servicio 24/7 para emergencias</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="mb-8">
+              <h3 class="text-xl font-bold mb-2">Dirección</h3>
+              <p class="text-gray-300">
+                Carrer de Sant Hermenegild, 16-24<br/>
+                Sarrià-Sant Gervasi<br/>
+                08006 Barcelona
+              </p>
+            </div>
+            <div class="mb-8">
+              <h3 class="text-xl font-bold mb-2">Teléfono</h3>
+              <a href="tel:690220944" class="text-red-500 hover:text-red-400 text-2xl font-bold">
+                690 22 09 44
+              </a>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Email</h3>
+              <a href="mailto:info@incendix.es" class="text-gray-300 hover:text-white">
+                info@incendix.es
+              </a>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg p-8 text-black">
+            <form class="space-y-6">
+              <div>
+                <label class="block text-sm font-medium mb-2">Nombre</label>
+                <input type="text" class="w-full px-4 py-2 border rounded-md" required/>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Teléfono</label>
+                <input type="tel" class="w-full px-4 py-2 border rounded-md" required/>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Mensaje</label>
+                <textarea class="w-full px-4 py-2 border rounded-md h-32" required></textarea>
+              </div>
+              <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-md font-semibold transition-colors">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

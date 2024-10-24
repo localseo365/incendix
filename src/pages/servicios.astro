@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+---
+
+<Layout 
+  title="Servicios de Limpieza Post Incendio en Barcelona | Restauración Profesional"
+  description="Servicios especializados en limpieza y restauración después de incendios en Barcelona. Limpieza de hollín, eliminación de olores y restauración completa."
+>
+  <main>
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold text-center mb-8">Nuestros Servicios de Limpieza Post Incendio</h1>
+        <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+          Ofrecemos servicios profesionales y especializados para la restauración completa de espacios afectados por incendios
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <ServiceCard
+            title="Evaluación y Diagnóstico"
+            description="Nuestro equipo de expertos realiza una evaluación exhaustiva de los daños causados por el incendio, utilizando tecnología avanzada para detectar daños no visibles. Analizamos la extensión de los daños por humo, hollín y agua, evaluamos la calidad del aire y la estructura del edificio. Desarrollamos un plan de acción detallado y personalizado que incluye una estimación precisa de tiempo y costes. Este diagnóstico inicial es crucial para garantizar una restauración efectiva y segura, identificando áreas prioritarias y posibles riesgos ocultos. Nuestro informe incluye documentación fotográfica y recomendaciones específicas para cada área afectada."
+            image="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          />
+          <ServiceCard
+            title="Limpieza de Hollín y Residuos"
+            description="Utilizamos técnicas especializadas y productos profesionales para eliminar el hollín y los residuos de todas las superficies afectadas. Nuestro proceso incluye la limpieza meticulosa de paredes, techos, suelos y todas las superficies expuestas, empleando métodos específicos según el tipo de material. Trabajamos con equipos de última generación como limpiadores ultrasónicos, sistemas de limpieza por presión controlada y productos químicos especializados que no dañan las superficies. Realizamos una limpieza profunda que elimina no solo los residuos visibles, sino también las partículas microscópicas que pueden causar problemas de salud a largo plazo."
+            image="https://images.unsplash.com/photo-1584174594005-60a49c828bff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          />
+          <ServiceCard
+            title="Eliminación de Olores"
+            description="Implementamos un sistema integral de eliminación de olores que va más allá del simple enmascaramiento. Utilizamos ozono, hidroxilación térmica y otros tratamientos avanzados para descomponer molecularmente los olores. Nuestro proceso incluye la descontaminación del aire, el tratamiento de superficies porosas y la neutralización de partículas de humo. Empleamos equipos de filtración HEPA y tratamientos específicos para cada tipo de material afectado. El proceso se completa con una fase de sellado para prevenir la reaparición de olores, garantizando un ambiente completamente libre de olores a humo."
+            image="https://images.unsplash.com/photo-1584174594234-89319a4ca5d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          />
+          <ServiceCard
+            title="Restauración de Superficies"
+            description="Nuestro servicio de restauración de superficies abarca desde la limpieza profunda hasta la reconstrucción completa cuando sea necesario. Utilizamos técnicas especializadas para cada tipo de material: madera, yeso, metal, piedra o textiles. El proceso incluye la evaluación estructural, limpieza específica según el material, tratamientos protectores y, cuando es necesario, el reemplazo o reconstrucción de elementos dañados. Aplicamos selladores y acabados protectores para prevenir daños futuros y restaurar la apariencia original de las superficies, garantizando tanto la estética como la integridad estructural."
+            image="https://images.unsplash.com/photo-1581092160607-ee67df4fb6cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          />
+          <ServiceCard
+            title="Limpieza de Sistemas HVAC"
+            description="La limpieza de sistemas de ventilación es crucial tras un incendio. Nuestro servicio incluye la inspección completa mediante cámaras robotizadas, limpieza profunda de conductos, cambio de filtros y descontaminación de todo el sistema HVAC. Utilizamos equipos especializados para acceder a todas las áreas del sistema, eliminando hollín, residuos y olores. El proceso incluye la desinfección completa para eliminar cualquier contaminante potencialmente peligroso, la reparación de conductos dañados y la verificación final de la calidad del aire. Garantizamos que el aire que circula por su sistema sea seguro y limpio."
+            image="https://images.unsplash.com/photo-1581092160607-ee67df4fb6cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          />
+          <ServiceCard
+            title="Restauración de Contenidos"
+            description="Ofrecemos un servicio integral de restauración de contenidos que incluye la evaluación, documentación y limpieza especializada de muebles, documentos, electrónicos y objetos personales. Utilizamos técnicas específicas para cada tipo de material, desde la limpieza ultrasónica para objetos delicados hasta la restauración especializada de documentos y fotografías. Nuestro proceso incluye el empaquetado seguro, transporte a nuestras instalaciones si es necesario, y almacenamiento temporal en condiciones controladas. Trabajamos con especial cuidado en la restauración de objetos de valor sentimental y documentos importantes, utilizando técnicas de conservación profesionales."
+            image="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+          />
+        </div>
+
+        <div class="bg-gray-50 p-8 rounded-lg text-center">
+          <h2 class="text-2xl font-bold mb-4">¿Necesita Nuestros Servicios?</h2>
+          <p class="text-gray-600 mb-8">
+            Contacte con nosotros para una evaluación gratuita y presupuesto sin compromiso
+          </p>
+          <ContactCTA className="justify-center" />
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,16 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+---
+
+<div class={`flex flex-col sm:flex-row gap-4 ${className}`}>
+  <a href="/contacto" class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-md text-lg font-semibold text-center transition-colors">
+    Solicitar Presupuesto Gratuito
+  </a>
+  <a href="tel:690220944" class="border border-white text-white px-8 py-4 rounded-md text-lg font-semibold text-center hover:bg-white hover:text-gray-900 transition-colors">
+    Llamar al 690 22 09 44
+  </a>
+</div>

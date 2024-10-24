@@ -1,0 +1,53 @@
+---
+interface Props {
+  className?: string;
+  beforeAfter?: boolean;
+}
+
+const { className = "", beforeAfter = false } = Astro.props;
+---
+
+<div class={`grid ${beforeAfter ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-3'} gap-6 ${className}`}>
+  {beforeAfter ? (
+    <>
+      <div class="relative">
+        <img
+          src="/images/fire-damage-before.jpg"
+          alt="Daños por incendio antes de la limpieza"
+          class="w-full h-64 object-cover rounded-lg"
+        />
+        <div class="absolute bottom-4 left-4 bg-black bg-opacity-75 text-white px-4 py-2 rounded">
+          Antes
+        </div>
+      </div>
+      <div class="relative">
+        <img
+          src="/images/fire-damage-after.jpg"
+          alt="Resultado después de la limpieza"
+          class="w-full h-64 object-cover rounded-lg"
+        />
+        <div class="absolute bottom-4 left-4 bg-black bg-opacity-75 text-white px-4 py-2 rounded">
+          Después
+        </div>
+      </div>
+    </>
+  ) : (
+    <>
+      <img
+        src="/images/cleaning-process-1.jpg"
+        alt="Proceso de limpieza profesional"
+        class="w-full h-64 object-cover rounded-lg"
+      />
+      <img
+        src="/images/cleaning-process-2.jpg"
+        alt="Equipo especializado de limpieza"
+        class="w-full h-64 object-cover rounded-lg"
+      />
+      <img
+        src="/images/cleaning-process-3.jpg"
+        alt="Restauración de superficies"
+        class="w-full h-64 object-cover rounded-lg"
+      />
+    </>
+  )}
+</div>
